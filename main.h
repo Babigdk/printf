@@ -16,3 +16,5 @@ typedef struct structprint
 
 int _putchar(char ch);
 int _printf(char *format, ...);
+
+#endif
