@@ -1,36 +1,29 @@
-#ifndef MAIN_H
-#define MAIN_H
-
+#ifndef HOLBERTON_H
+#define HOLBERTON_H
 #include <stdarg.h>
-#include <stddef.h>
-#include <stdlib.h>
 
 /**
- * struct structprint - structure content
- * @q: the location and method to translate data to character
- * @u: print function for specific type
- *
- * Return: int
- */
-typedef struct structprint
+  * struct specifiers - Struct specifiers
+  * @specifier: The conversion specifier
+  * @f: The function pointer
+  */
+typedef struct specifiers
 {
-	char *q;
-	int (*u)(char *format, va_list);
-} structype;
+	char *specifier;
+	int (*f)(va_list args);
+} spc_dt;
 
-int _putchar(char ch);
-int _printf(char *format, ...);
-int _puts(char *string);
-int printstr(char *format, va_list);
-int (*driver(char *format))(char *format, va_list);
-int printint(char *format, va_list pa);
-int integer(int number);
-int contadordigit(int number);
-int _abs(int number);
-int printpercent(char *format, va_list);
-int _abs(int number);
-int printhex(char *format, va_list);
-int printHEX(char *format, va_list);
-int printocta(char *format, va_list);
-int print_unsign(char *format, va_list);
-#endif
+int _write(char c);
+int _printf(const char *format, ...);
+int _print_a_char(va_list args);
+int _print_a_string(va_list args);
+int _print_format(const char *format, va_list args);
+int _print_spec(char format, va_list args);
+int _print_invalid_spec(char prev_format, char format, int count);
+int _print_a_integer(va_list args);
+void _recursion_integer(int a);
+int _print_int_binary(va_list args);
+void _recursion_int_binary(int a);
+int _validate_char(char _type);
+
+#endif /* _HOLBERTON */
