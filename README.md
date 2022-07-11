@@ -64,25 +64,6 @@ Upon successful return, the **_printf()** function return the number of characte
 
 If an output error is encountered, a negative value is returned.
 
-
-## Examples
-
-**#include "main.h"**
-
-_printf("Hello Holberton"); **// the output will be: Hello Holberton**
-
-_printf("%c", 'H'); // **the output will be: H**
-
-_printf("%s", "Hello Holberton"); **// the output will be: Hello Holberton**
-
-_printf("%!\n"); **// the output will be '%!'**
-
-_printf("Complete the sentence: You %s nothing, Jon Snow.\n", "know"); **// the output will be: Complete the sentence: You know nothing, Jon Snow.**
-
-_printf("%        s", "Hello"); **// the output will be: Hello**
-
-_printf("%        k"); **// the output will be: % k**
-
 ## Author
 
 **_printf()** is written and maintained by **By Abdulrazaq & Ruksaar Adam**
